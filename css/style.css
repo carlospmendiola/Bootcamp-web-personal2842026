@@ -5,18 +5,9 @@
   box-sizing: border-box;
 }
 html {
-  background-color: #e9e9e9;
   font-family: 'Quicksand', sans-serif;
 }
 
-.container {
-  width: 100%;  
-  margin: 0 auto;
-  border: 1px solid #bc0909;
-  background-color: #fff;
-  border-width: 0 1px;
-  padding: 2rem 0rem;
-}
 .fullContainer{
   width: 100%;
   border: 1px solid #bc0909;
@@ -25,7 +16,6 @@ html {
 }
 
 header {
-  border-bottom: 1px solid #f3f3f3;
   text-align: center;
   padding: 4rem 0rem 2rem;
 }
@@ -57,12 +47,83 @@ nav ul li a {
 nav ul li a:hover {
   color: #f6ff7b;
 }
-/* 
-.contenido {
-  padding: 2rem 7rem 15rem;
-  position: relative;
+.container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 0rem;
 }
-
+.contenido {
+  padding: 0px 0px;
+}
+.sobremiIndex,
+.serviciosIndex,
+.proyectosIndex {
+  background-color: #efefef;
+  padding: 30px 35px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 35px;
+  align-items: center;
+}
+/* ================  
+Apartado Sobre Mi
+====================*/
+.sobremiIndex img {
+  border-radius: 20px;
+}
+.sobremiIndex .txt-sobremi {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+  text-align: justify;
+  padding-bottom: 20px;
+}
+/* ================  
+Apartado Servicios
+====================*/
+.serviciosIndex {
+  background-color: #fff;
+  gap: 0;
+  padding: 40px 35px;
+}
+.listServicios,
+.listProyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px 0px;
+}
+.servicioContainer,
+.proyectoContainer {
+  background-color: #f0eeee;
+  padding: 20px 15px 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 15px;
+  text-align: center;
+}
+/* ================  
+Apartado Proyectos
+====================*/
+.proyectosIndex {
+  background-color: #fbfbfb;
+  padding-top: 45px;
+  gap: 5px;
+}
+.proyectoContainer {
+  padding: 0;
+}
+.imgProyecto {
+  padding: 0;
+}
+.imgProyecto img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+.txtProyecto {
+  padding: 25px 35px;
+}
+/*
 section {
   margin-right: 450px;
 }
@@ -93,23 +154,49 @@ h1 {
 }
 
 h2 {
-  font: 400 1.4rem/1.2 'Playfair Display', sans-serif;
+  font: 400 1.6rem/1.2 'Playfair Display', sans-serif;
   text-transform: uppercase;
-  margin: 2rem 0 1.5rem;
-
+  margin: 0rem 0 1.5rem;
 }
-
+.sobremiIndex .txt-sobremi h2,
+.sobremiIndex .txt-sobremi p.botn {
+  text-align: center;
+  margin-bottom: 0;
+}
 h3 {
-  font: 400 1.2rem/1.2 'Playfair Display', sans-serif;
+  font: 400 1.5rem/1.2 'Playfair Display', sans-serif;
   margin-bottom: 1rem;
 }
-
-
 
 p {
   font: 400 1.25rem/1.4 "Quicksand", sans-serif;
   color: #131313;
   margin-bottom: 1rem;
+}
+p.botn {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+p.botn a {
+  background-color: #131313;
+  padding: 15px 35px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 15px;
+}
+p.botn a:hover {
+  background-color: #fff;
+  border: 2px solid #131313;
+  color: #131313;
+}
+.txtProyecto p a {
+  text-decoration: none;
+  font-weight: 600px;
+  text-align: center;
+  color: #890000;
 }
 
 footer p {
@@ -125,11 +212,7 @@ footer p {
 =================================*/
 
 @media screen and (min-width:769px){
-  .container {
-      width: 80%;
-      
-      padding: 20px;
-  }
+  
   nav ul {
     justify-content: space-evenly;
     flex-direction: row;
@@ -137,6 +220,29 @@ footer p {
   
   h1 {
     font-size: 2.6rem;
+  }
+  .sobremiIndex {
+    flex-flow: row nowrap;
+    gap: 55px;
+    padding: 40px 55px;
+    align-items: flex-start;
+  }
+  .sobremiIndex .txt-sobremi {
+    text-align: left;
+  }
+  .sobremiIndex .txt-sobremi h2,
+  .sobremiIndex .txt-sobremi p.botn {
+    text-align: left;
+  }
+  .listServicios,
+  .listProyectos {
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  .servicioContainer,
+  .proyectoContainer {
+    width: calc(50% - 13px);
   }
 
 }/*cierra 768*/
@@ -155,6 +261,17 @@ footer p {
     }
   h1 {
     font-size: 3rem;
+  }
+  .sobremiIndex {
+    gap: 65px;
+    padding: 50px 85px;
+  }
+  .sobremiIndex .txt-sobremi {
+    padding-top: 50px;
+  }
+  .servicioContainer,
+  .proyectoContainer {
+    width: calc(25% - 19px);
   }
 }
 
