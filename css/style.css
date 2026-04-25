@@ -10,14 +10,13 @@ html {
 
 .fullContainer{
   width: 100%;
-  border: 1px solid #bc0909;
   background-color: #fff;
   padding: 2rem 0rem;
 }
 
 header {
   text-align: center;
-  padding: 4rem 0rem 2rem;
+  padding: 2rem 0rem 1rem;
 }
 
 nav {
@@ -51,10 +50,19 @@ nav ul li a:hover {
   width: 100%;
   margin: 0 auto;
   background-color: #fff;
-  padding: 0rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
 }
 .contenido {
   padding: 0px 0px;
+}
+.zonaTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 .sobremiIndex,
 .serviciosIndex,
@@ -88,6 +96,7 @@ Apartado Servicios
   padding: 40px 35px;
 }
 .listServicios,
+.listServicios-int,
 .listProyectos {
   display: flex;
   flex-direction: column;
@@ -95,12 +104,38 @@ Apartado Servicios
   padding: 15px 0px;
 }
 .servicioContainer,
+.servicioContainer-Int,
 .proyectoContainer {
   background-color: #f0eeee;
   padding: 20px 15px 5px;
   border: 1px solid #dfdfdf;
   border-radius: 15px;
   text-align: center;
+}
+.listServicios-int {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px 0px;
+}
+.serviciosInterior,
+.serviciosInterior-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px 0px;
+}
+.serviciosInterior-principal {
+  padding: 25px 35px;
+}
+.servicioContainer-principal {
+  padding: 20px 15px 15px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.servicioContainer-principal img {
+  max-width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 /* ================  
 Apartado Proyectos
@@ -121,36 +156,177 @@ Apartado Proyectos
   width: 100%;
 }
 .txtProyecto {
+  padding: 15px 25px;
+}
+
+/* ================  
+Columna lateral
+====================*/
+aside {
+  padding: 45px 35px;
+  background-color: #f3f3f3;
+}
+aside.colInteror {
+  padding: 10px 20px;
+  border-top: 1px solid #dedede;
+  background-color: #fff;
+}
+/* ================  
+Estilos formulario
+====================*/
+.containerFormulario {
+  display: flex;
+  flex-direction: column;
   padding: 25px 35px;
 }
-/*
-section {
-  margin-right: 450px;
+.datos ul li {
+  padding:0 20px 10px 20px;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 10px;
+}
+.datos,
+.formulario {
+  padding: 35px 25px;
+}
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-aside {
-  width: 350px;
-  padding: 6rem 4rem 4rem 3rem;
-  background-color: #f3f3f3;
-  position: absolute;
-  top: 0;
-  right: 0;
+legend {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0 .5rem;
+  color: #131313;
 }
 
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: .9rem;
+  margin-bottom: .35rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: .5rem .75rem;
+  font-size: .95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #dfdfdf;
+  border-color: #dfdfdf;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Grupo de radios */
+.campo--radio {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  align-items: center;
+}
+
+.campo--radio>span {
+  width: 100%;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: .1rem;
+}
+
+.radio-opcion,
+.checkbox-opcion {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .95rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.radio-opcion input,
+.checkbox-opcion input {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  gap: 1rem;
+  margin-top: .5rem;
+  justify-content: center;
+}
+
+button[type="submit"] {
+  background: #131313;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: .65rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background: #dfdfdf;
+  color: #131313;
+}
+
+button[type="reset"] {
+  background: #fff;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: .65rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="reset"]:hover {
+  background: #f5f5f5;
+}
+/* ================  
+Footer
+====================*/
 footer {
   text-align: center;
   background-color: #0b7b79e2;
   padding: 1rem 0;
   margin-top: 1rem;
 }
- */
-
 
 /* ESTILOS TEXTO */
 h1 {
   font: 300 2.2rem/1.2 "Playfair Display", serif;
   text-align: center;
   color: #0b687b;
+}
+h1 span {
+  text-transform: uppercase;
+  font: 400 2rem/1 "Quicksand", sans-serif;
+  color: #666;
 }
 
 h2 {
@@ -198,11 +374,22 @@ p.botn a:hover {
   text-align: center;
   color: #890000;
 }
+.colInteror p {
+  margin-bottom: 1rem!important;
+}
 
 footer p {
   color: #fff;
   margin-bottom: 0rem;
   font-size: 1.1rem;
+  padding: 10px 35px;
+}
+footer p a {
+  text-decoration: none;
+  color: #fff;
+}
+footer p a:hover {
+  color: #f6ff7b;
 }
 
 
@@ -235,12 +422,14 @@ footer p {
     text-align: left;
   }
   .listServicios,
+  .listServicios-int,
   .listProyectos {
     flex-direction: row;
     gap: 25px;
     flex-wrap: wrap;
   }
   .servicioContainer,
+  .servicioContainer-Int,
   .proyectoContainer {
     width: calc(50% - 13px);
   }
@@ -273,6 +462,23 @@ footer p {
   .proyectoContainer {
     width: calc(25% - 19px);
   }
+  aside.colInteror {
+    padding: 20px 40px;
+    border: 1px solid #dedede;
+    border-width: 0px 0px 0px 1px ;
+  }
+  .serviciosIndex {
+    padding: 10px;
+  }
+  .containerFormulario {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .datos,
+  .formulario {
+    width: calc(50% - 10px);
+  }
+
 }
 
 /*cierra 992*/
@@ -281,6 +487,34 @@ footer p {
           1200px 
 =================================*/
 
-@media screen and (min-width:1200px) {}
+@media screen and (min-width:1200px) {
+
+  .container {
+    width: 95%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 35px 0px;
+  }
+  .zonaTxt {
+      grid-column: 1 / 4;
+      grid-row: 1/4;
+  }
+  
+  aside {
+      grid-column: 4 / 5;
+      grid-row: 1/4;
+  }
+  .servicioContainer {
+      width: calc(25% - 19px);
+    }
+  .servicioContainer-Int {
+      width: 100%;
+  }
+  .containerFormulario {
+    width: 80%;
+    margin: 50px auto;
+    max-width: 1368px;
+  }
+}
 
 /*cierra 1200*/

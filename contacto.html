@@ -14,29 +14,79 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>CarlosPMendiola<br>
-        <span>Contacto</span></h1>
-    </header>
+  <header>
+    <h1>CarlosPMendiola<br>
+    <span>Contacto</span></h1>
+  </header>
     <!-- La navegación principal tiene un posicionamiento sticky al llegar a la zona superior al hacer scroll se queda ahí-->
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="contacto.html">Sobre mí</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><strong>Contacto</strong></li>
-      </ul>
-    </nav>
-    <main class="contenido">
-  
-    </main>
-    <!-- Zona footer-->
-    <footer>
-      <p> © Copyright 2026. <a href="#">Aviso legal</a> - <a href="#">Política de privacidad</a> - <a href="#">Política de
-          cookies</a></p>
-    </footer>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre-mi.html">Sobre mí</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><strong>Contacto</strong></li>
+    </ul>
+  </nav>
+  <main class="contenido">
+    <section class="containerFormulario">
+      <article class="datos">
+        <h2>Dónde estamos</h2>
+        <ul>
+          <li>hola@dominio.es</li>
+          <li>945 123 456</li>
+          <li>C/ Los Herran 15</li>
+          <li>01004, Vitoria-Gasteiz</li>
+        </ul>
+      </article>
+      <article class="formulario">
+        <form action="#" method="post">
+        
+          <!-- DATOS PERSONALES -->
+          <fieldset>
+            <legend>Tus datos personales</legend>
+        
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" tabindex="1" autofocus required>
+            </div>
+        
+            <div class="campo">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" placeholder="Escribe tus apellidos" tabindex="2">
+            </div>
+
+            <div class="campo">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" tabindex="9" required>
+            </div>
+
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="600 000 000" tabindex="10">
+            </div>
+        
+            <div class="campo">
+              <label for="sobre-ti">¿Qué quieres de nosotros?</label>
+              <textarea id="sobre-ti" name="sobre_ti" placeholder="Cuéntanos en pocas palabras qué necesitas de nosotros..." tabindex="8"></textarea>
+            </div>
+          <di>
+            <input type="checkbox" id="acepto" name="acepto" value="sí">
+            <label for="acepto">He léido y acepto la <a href="#">Política de Privacidad</a></label>
+          </div>
+          </fieldset>
+          
+          <div class="acciones">
+            <button type="submit" tabindex="11">Enviar</button>
+          </div>
+        
+        </form>
+      </article>
+    </section>
+  </main>
+  <!-- Zona footer-->
+  <footer>
+    <p> © Copyright 2026. <a href="#">Aviso legal</a> - <a href="#">Política de privacidad</a> - <a href="#">Política de cookies</a></p>
+  </footer>
 </body>
 </html>

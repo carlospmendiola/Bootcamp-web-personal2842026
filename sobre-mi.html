@@ -13,29 +13,125 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>CarlosPMendiola<br>
-        <span>Sobre mí</span>
-      </h1>
-    </header>
+  <header>
+    <h1>CarlosPMendiola<br>
+      <span>Sobre mí</span>
+    </h1>
+  </header>
     <!-- La navegación principal tiene un posicionamiento sticky al llegar a la zona superior al hacer scroll se queda ahí-->
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><strong>Sobre mí</strong></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-    <main class="contenido">
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><strong>Sobre mí</strong></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+  <main class="contenido container">
+    <div class="zonaTxt">
+  <section class="sobremiIndex">
+    <div class="img-sobremi">
+      <picture>
+        <source srcset="images/img-sobremi-escritorio.jpg" media="(min-width: 991px)">
+        <source srcset="images/img-sobremi-tablet.jpg" media="(min-width: 767px)">
+        <img src="images/img-sobremi-movil.jpg" alt="Descripción de la imagen">
+      </picture>
+    </div>
+    <div class="txt-sobremi">
+      <h2>Sobre mí</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero facere porro possimus inventore quo
+        accusantium minus, sed excepturi. Eius aspernatur sit voluptas suscipit assumenda.! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eveniet doloremque voluptatibus praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolore!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae minima incidunt odio mollitia veritatis commodi dolores consectetur sequi illo cum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta, quidem vero nemo earum ab nihil ipsam non? Ab blanditiis mollitia odio officiis nulla dolorum quibusdam est alias sed magni!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quae, mollitia architecto nihil tenetur hic iusto pariatur omnis eligendi quia itaque dicta vitae, ut exercitationem sed eveniet nemo, consequatur suscipit!</p>
+    </div>
+  </section>
+  
+  <section class="proyectosIndex">
+    <h2>Mis Proyectos</h2>
+    <div class="listProyectos">
+      <article class="proyectoContainer">
+        <div class="imgProyecto">
+          <picture>
+            <source srcset="images/img-proyecto1-escritorio.jpg" media="(min-width: 991px)">
+            <source srcset="images/img-proyecto1-tablet.jpg" media="(min-width: 767px)">
+            <img src="images/img-proyecto1-movil.jpg" alt="Descripción de la imagen">
+          </picture>
+        </div>
+        <div class="txtProyecto">
+          <h3>Hierros Martínez</h3>
+          <p><a href="proyectos.html#martinez"> <strong>>> Ver proyecto</strong></a></p>
+        </div>
+      </article>
+      <article class="proyectoContainer">
+        <div class="imgProyecto">
+          <picture>
+            <source srcset="images/img-proyecto2-escritorio.jpg" media="(min-width: 991px)">
+            <source srcset="images/img-proyecto2-tablet.jpg" media="(min-width: 767px)">
+            <img src="images/img-proyecto2-movil.jpg" alt="Descripción de la imagen">
+          </picture>
+        </div>
+        <div class="txtProyecto">
+          <h3>Carpintería GyiTaller</h3>
+          <p><a href="proyectos.html#gyitaller"> <strong>>> Ver proyecto</strong></a></p>
+        </div>
+      </article>
+      <article class="proyectoContainer">
+        <div class="imgProyecto">
+          <picture>
+            <source srcset="images/img-proyecto3-escritorio.jpg" media="(min-width: 991px)">
+            <source srcset="images/img-proyecto3-tablet.jpg" media="(min-width: 767px)">
+            <img src="images/img-proyecto3-movil.jpg" alt="Descripción de la imagen">
+          </picture>
+        </div>
+        <div class="txtProyecto">
+          <h3>Grossman Producciones</h3>
+          <p><a href="proyectos.html#grossman"> <strong>>> Ver proyecto</strong></a></p>
+        </div>
+      </article>
+      <article class="proyectoContainer">
+        <div class="imgProyecto">
+          <picture>
+            <source srcset="images/img-proyecto4-escritorio.jpg" media="(min-width: 991px)">
+            <source srcset="images/img-proyecto4-tablet.jpg" media="(min-width: 767px)">
+            <img src="images/img-proyecto4-movil.jpg" alt="Descripción de la imagen">
+          </picture>
+        </div>
+        <div class="txtProyecto">
+          <h3>Clínica La Luz</h3>
+          <p><a href="proyectos.html#laluz"> <strong>>> Ver proyecto</strong></a></p>
+        </div>
+      </article>
+    </div>
+    <p class="botn"><a href="proyectos.html">Ver todos los proyectos</a></p>
+  </section>
+    </div>
 
-    </main>
-    <!-- Zona footer-->
-    <footer>
-      <p> © Copyright 2026. <a href="#">Aviso legal</a> - <a href="#">Política de privacidad</a> - <a href="#">Política de cookies</a></p>
-    </footer>
-  </div>
+    <!-- Zona lateral del aside-->
+    <aside class="colInteror">
+      <section class="serviciosIndex">
+        <h2>Servicios</h2>
+        <div class="listServicios-int">
+          <article class="servicioContainer-Int">
+            <h3>Diseño Web</h3>
+          </article>
+          <article class="servicioContainer-Int">
+            <h3>Diseño de Apps</h3>
+          </article>
+          <article class="servicioContainer-Int">
+            <h3>Responsive Web Design</h3>
+          </article>
+          <article class="servicioContainer-Int">
+            <h3>SEO on page</h3>
+          </article>
+        </div>
+        <p class="botn"><a href="servicios.html">Mis servicios</a></p>
+      </section>
+    </aside>
+  </main>
+  <!-- Zona footer-->
+  <footer>
+    <p> © Copyright 2026. <a href="#">Aviso legal</a> - <a href="#">Política de privacidad</a> - <a href="#">Política de cookies</a></p>
+  </footer>
 </body>
 </html>
